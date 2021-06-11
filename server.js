@@ -14,7 +14,6 @@ connection.connect(function (err) {
 })
 
 const startPrompt = () => {
-    console.log('started');
     return inquirer.prompt([
         {
             type: 'list',
@@ -53,7 +52,7 @@ const startPrompt = () => {
 function viewDepartments(){
 connection.query('SELECT * from departments', function(err,res){
     if (err) throw err;
-    console.table(res);
+    console.log(res);
     startPrompt();
     console.log('asdkjhasfkjh')
 })
