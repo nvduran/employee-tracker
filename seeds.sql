@@ -1,4 +1,4 @@
-INSERT INTO departments(dept_name)
+INSERT INTO departments (dept_name)
 VALUES('Legal'),('Engineering'),('Finance'),('Sales')
 
 INSERT INTO roles (title, salary, dept_id)
@@ -20,6 +20,8 @@ VALUES
 ('Ron', 'Weasley', 2, 2),
 ('Fernando', 'Alonso', 3, NULL),
 ('Lewis', 'Hamilton', 4, 1)
+
+
 
 
 

@@ -1,11 +1,11 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
-const table = require('console.table');
+// const table = require('console.table');
 
 const connection = mysql.createConnection(
-    { host: 'localhost', user: 'root', password: '!6MUOweit', database: 'employee_DB' }
-)
+    { host: "localhost", port: 3306, user: "root", password: "!6MUOweit", database: "employee_db" }
+);
 
 connection.connect(function (err) {
     if (err) throw err;
@@ -51,8 +51,7 @@ const startPrompt = () => {
 }
 
 function viewDepartments(){
-let query = 'SELECT * FROM departments'
-connection.query(query, function(err,res){
+connection.query('SELECT * from departments', function(err,res){
     if (err) throw err;
     console.table(res);
     startPrompt();
