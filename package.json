@@ -5,10 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "migrate": "sqlite3 db/election.db < db/schema.sql",
-    "seed": "sqlite3 db/election.db < db/seeds.sql",
-    "db": "sqlite3 db/election.db"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +19,10 @@
   },
   "homepage": "https://github.com/nvduran/employee-tracker#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
     "express": "^4.17.1",
     "inquirer": "^8.0.0",
+    "mysql2": "^2.2.5",
     "sqlite3": "^5.0.2"
   }
 }
